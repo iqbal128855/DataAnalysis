@@ -1,3 +1,5 @@
+Data Inspection:
+
 This is a summary of the steps performed to develop a data preprocessing steps using UCI Wine Data Repository. 
 
 Step 1. 
