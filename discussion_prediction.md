@@ -1,7 +1,54 @@
 
-### Decision Trees
+Decision Trees:
 
 I perform decision tree analysis to test nonlinear relationships among a set of explanatory variables (amount of residual sugar and alcohol in wine) and a binary, categorical response variable (`0` - if the quality of a wine sample is 3, 4, or 5, `1` - if 6, 7, 8, or 9). All possible cut points (for explanatory variables) are tested. For the present analysis, the entropy “goodness of split” criterion was used to grow the tree and a cost complexity algorithm was used for pruning the full tree into a final subtree. A classification tree was build for each of the wine sets (red and white) separately. In each set, 80% of the samples were used for the training, and 20% - for testing. 
+
+Parameter Selection:
+These are the parameters used for training Decision Trees.
+
+criterion : ”gini”
+The function to measure the quality of a split. 
+
+splitter : ”best”
+The strategy used to choose the split at each node. Supported strategies are “best” to choose the best split.
+
+max_depth : None.
+Nodes are expanded until all leaves are pure or until all leaves contain less than min_samples_split samples.
+
+min_samples_split : 2
+The minimum number of samples required to split an internal node.
+
+min_samples_leaf : 1
+The minimum number of samples required to be at a leaf node:
+
+min_weight_fraction_leaf : 0
+The minimum weighted fraction of the sum total of weights (of all the input samples) required to be at a leaf node.
+
+max_features : auto
+The number of features to consider when looking for the best split.
+If “auto”, then max_features=sqrt(n_features).
+
+random_state : 123
+
+max_leaf_nodes : None
+Grow a tree with max_leaf_nodes in best-first fashion. Best nodes are defined as relative reduction in impurity. If None then unlimited number of leaf nodes.
+
+min_impurity_decrease : 0
+A node will be split if this split induces a decrease of the impurity greater than or equal to this value.
+
+The weighted impurity decrease equation is the following:
+
+N_t / N * (impurity - N_t_R / N_t * right_impurity
+                    - N_t_L / N_t * left_impurity)
+where N is the total number of samples, N_t is the number of samples at the current node, N_t_L is the number of samples in the left child, and N_t_R is the number of samples in the right child.
+
+class_weight : None
+
+Weights associated with classes in the form {class_label: weight}. If not given, all classes are supposed to have weight one. For multi-output problems, a list of dicts can be provided in the same order as the columns of y.
+
+Note that for multioutput (including multilabel) weights should be defined for each class of every column in its own dict. For example, for four-class multilabel classification weights should be [{0: 1, 1: 1}, {0: 1, 1: 5}, {0: 1, 1: 1}, {0: 1, 1: 1}] instead of [{1:1}, {2:5}, {3:1}, {4:1}].
+
+presort : False
 
 The accuracy of the resulted tree for the **red** wine is `0.65`. The confusion matrix is:
  
@@ -18,7 +65,7 @@ The accuracy of the resulted tree for the **white** wine is `0.72`. The confusio
  The resulted trees are too big to be examined and visualized. It might indicate that the selected variables are not suitable for proper tree formation, or that the tree analysis is not suitable for these data. The work on this problem is continued in the next paragraph.
  
  
-### Random Forests
+Random Forests: 
 
 Here I perform random forest analysis to evaluate the importance of all the explanatory variables in predicting the quality of wine (binary target variable: `0` - if the quality of a wine sample is 3, 4, or 5, `1` - if 6, 7, 8, or 9). Analysis was performed for each wine set (red and white) separately. In each set, 80% of the sample were used for the training, and 20% - for testing. 
 
