@@ -28,7 +28,7 @@ max_features : auto
 The number of features to consider when looking for the best split.
 If “auto”, then max_features=sqrt(n_features).
 
-random_state : 123
+random_state : None
 
 max_leaf_nodes : None
 Grow a tree with max_leaf_nodes in best-first fashion. Best nodes are defined as relative reduction in impurity. If None then unlimited number of leaf nodes.
@@ -52,22 +52,20 @@ presort : False
 
 Result Analysis:
 
-The accuracy of the resulted tree for the **red** wine is `0.65`. The confusion matrix is:
- 
- `[198  105]`
+-----Red Wine Decision Tree
+confusion matrix: `[[106,  31]`
+                  `[ 50, 133]]`
+accuracy: 0.74687499999999996
+f1_score: 0.7665706051873199)
 
- `[120  217]`
+-----White Wine Decision Tree
+confusion matrix: `[[ 98,  42]`
+                  `[ 47, 133]]`
+accuracy: 0.72187500000000004)
+f1_score: 0.74929577464788732)
 
-accuracy: 0.6484375
 
-The accuracy of the resulted tree for the **white** wine is `0.72`. The confusion matrix is:
- 
- `[404  262]`
-
- `[290  1004]`
-
-accuracy: 0.718367346939 
- The resulted trees are too big to be examined and visualized. It might indicate that the selected variables are not suitable for proper tree formation, or that the tree analysis is not suitable for these data. The work on this problem is continued in the next paragraph.
+The resulted trees are too big to be examined and visualized. It might indicate that the selected variables are not suitable for proper tree formation, or that the tree analysis is not suitable for these data. The work on this problem is continued in the next paragraph.
  
  
 Random Forests: 
@@ -129,18 +127,17 @@ class_weight : None
 
 Result Analysis:
 
-Red
-confusion matrix:
- `[[217  77]`
- `[ 65 281]]`
+-----Red Wine Random Forest
+confusion matrix: `[[237,  75]`
+                  `[ 65, 263]]`
+accuracy: 0.78125
+f1_score: 0.78978978978978975
 
-accuracy: 0.778125
 
-White
-confusion matrix:
- `[[ 436  203]`
- `[ 157 1164]]`
-
-accuracy: 0.816326530612
+-----White Wine Random Forest
+confusion matrix: `[[238,  62]`
+                  `[ 79, 261]]`
+accuracy: 0.77968749999999998
+f1_score: 0.78733031674208154
 
 
