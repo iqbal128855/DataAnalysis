@@ -1,8 +1,7 @@
-Data Inspection:
+### Data Inspection:
 
 This is a summary of the steps performed to develop a data preprocessing steps using UCI Wine Data Repository. 
 
-Step 1. 
 Once data is downloaded, I checked the data to determine necessary preprocessing steps.
 At first, I check for any missing data values, which the dataset does not contain. The idea was to remove the rows for which a column would be missing and if there are lot of missing values the idea was to impute those values with the mean of that column. 
 
