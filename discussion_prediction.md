@@ -52,13 +52,13 @@ presort : False
 
 Result Analysis:
 
------Red Wine Decision Tree
+-----Red Wine Decision Tree-----
 confusion matrix: `[[106,  31]`
                   `[ 50, 133]]`
 accuracy: 0.74687499999999996
 f1_score: 0.7665706051873199)
 
------White Wine Decision Tree
+-----White Wine Decision Tree-----
 confusion matrix: `[[ 98,  42]`
                   `[ 47, 133]]`
 accuracy: 0.72187500000000004)
@@ -127,16 +127,17 @@ class_weight : None
 
 Result Analysis:
 
------Red Wine Random Forest
+-----Red Wine Random Forest-----
 confusion matrix: `[[237,  75]`
                   `[ 65, 263]]`
 accuracy: 0.78125
 f1_score: 0.78978978978978975
 
 
------White Wine Random Forest
+-----White Wine Random Forest-----
 confusion matrix: `[[238,  62]`
                   `[ 79, 261]]`
+
 accuracy: 0.77968749999999998
 f1_score: 0.78733031674208154
 
