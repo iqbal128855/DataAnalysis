@@ -1,4 +1,4 @@
-Determine Attribute Quality: 
+### Determine Attribute Quality: 
 
 This is a very important step for feature selection. My idea was to select most 
 important features to use for classification. I am intending to use Decision 
